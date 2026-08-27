@@ -15,9 +15,19 @@ public class Solution {
         ListNode l2 = headB;
 
         while(l1 != l2){
-            l1 = l1 == null ? headA : l1.next;
-            l2 = l2 == null ? headB : l2.next;
+            if(l1 == null){
+                l1 = headA;
+            }else{
+                l1 = l1.next;
+            }
+
+            if(l2 == null){
+                l2 = headB;
+            }else{
+                l2 = l2.next;
+            }
         }
+
         return l1;
 
         // int sizeA = 0;
